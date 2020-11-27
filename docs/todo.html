@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <title>TODO_LIST</title>
+</head>
+<body>
+    <div class="contents">
+        <div class="line_frame">
+            <table class="line" border="3"  frame="void">
+                <tr>
+                    <td ></td>
+                    <td ></td>
+                </tr>
+                <tr>
+                    <td ></td>
+                    <td ></td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="criteria">
+            <p class="emergency">Emergency</p>
+            <p class="take_your_time">Take your time</p>
+            <p class="time_consuming">Time-consuming</p>
+            <p class="not_time_consuming">NOT Time-consuming</p>
+        </div>
+
+        <div class="buttom">
+            <input type="button" value="ADD" class="add_button" id="add_button">
+        </div>
+
+        <div class="modals">
+            <div class="modal_add" id="modal_add">
+                <input type="text" maxlength="10" name="text" class="subject" id="subject" placeholder="subject">
+                <div class="topics">
+                    <div class="t1">
+                        <p class="topic">Emergence</p>
+                        <input type="range" max="95" min="5" name="emergence" id="emergence">
+                    </div>
+                    <div class="t2">
+                        <p class="topic">Time-consuming</p>
+                        <input type="range" max="95" min="5" name="time_consuming" id="time_consuming">  
+                    </div>            
+                </div>
+                <div class="modal_buttons">
+                    <input type="button" value="CANCEL" class="task_cancel" id="task_cancel">
+                    <input type="button" value="ADD" class="task_add" id="task_add">
+                </div>              
+            </div>
+            <div class="modal_edit" id="modal_edit">
+                <input type="text" maxlength="10" name="text" class="subject" id="e_subject" placeholder="subject">
+                <div class="topics">
+                    <div class="t1">
+                        <p class="topic">Emergence</p>
+                        <input type="range" max="95" min="5" name="emergence" id="e_emergence">
+                    </div>
+                    <div class="t2">
+                        <p class="topic">Time-consuming</p>
+                        <input type="range" max="95" min="5" name="time_consuming" id="e_time_consuming">  
+                    </div>            
+                </div>
+                <div class="modal_buttons">
+                    <input type="button" value="EDIT" class="task_edit" id="task_edit">
+                    <input type="button" value="REMOVE" class="task_remove" id="task_remove">
+                </div>    
+            </div>
+        </div>
+
+        <div id="overlay" class="overlay"></div>
+
+        <div id="task_holder"></div>
+
+
+    </div>
+
+    
+
+    <script src="js/store.js"></script>
+    <script src="js/todo-model.js"></script>
+    <script src="js/todo-view.js"></script>
+    <script src="js/todo-controller.js"></script>
+    <script src="js/todo-app.js"></script>
+</body>
+</html>

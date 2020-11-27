@@ -1,0 +1,154 @@
+body{
+    font-family: cursive;
+}
+
+.line, .criteria{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.line td{
+    width:50%;
+}
+.criteria p{
+    position: fixed;
+    margin: 0;
+}
+
+
+.emergency{
+    top: 3%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.take_your_time{
+    bottom: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.time_consuming{
+    right: 0%;
+    top: 50%;
+}
+.not_time_consuming{
+    top: 50%;
+}
+
+.add_button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    font-size: 2rem;
+    font-family: cursive;
+    border-radius: 10%;
+    padding: 1rem;
+}
+
+
+/* modal */
+
+.modals{
+    position: relative;
+}
+.modal_add{
+    position: fixed;
+    display: none;
+    top: 20%;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    background-color: #fff;
+    z-index: 9999;
+    border-radius: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal_add > div{
+    display: flex;
+}
+
+.subject{
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: cursive;
+}
+
+.topics{
+    justify-content: space-around;
+}
+
+.modal_buttons{
+    justify-content: flex-end;  
+}
+
+.modal_buttons > input{
+    font-family: cursive;
+    color: white;
+}
+.task_cancel{
+    background-color: gray;
+}
+.task_add{
+    background-color: palevioletred;
+}
+
+.task_edit{
+    background-color: palegreen;
+}
+
+.task_remove{
+    background-color: dimgrey;
+}
+
+.modal_buttons > input{
+    padding: 1em;
+    margin: 1em;
+}
+
+/* ------------------------------ */
+.modal_edit{
+    position: fixed;
+    display: none;
+    top: 20%;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    background-color: #fff;
+    z-index: 9999;
+    border-radius: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal_edit > div{
+    display: flex;
+}
+
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-color: #222222;
+    z-index: 9000;
+}
+
+.task{
+    position: absolute;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    margin:0;
+    padding: 0 1rem;
+    border-radius: 50%;
+    background-color: yellow;
+}
