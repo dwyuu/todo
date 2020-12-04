@@ -38,8 +38,13 @@
 
     List.prototype.identify = function(id){
         for (let i = 0; i < this.storage_obj.TODOS.length; i++) {
-            if (this.storage_obj.TODOS[i].id === parseInt(id)) return i;
+            if (this.storage_obj.TODOS[i].id == parseInt(id)) return i;
         }
+    }
+
+    List.prototype.return_todo = function(id){
+        let idx = this.identify(id);
+        return this.storage_obj.TODOS[idx];
     }
 
     // TODO MODEL

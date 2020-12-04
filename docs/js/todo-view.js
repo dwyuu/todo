@@ -92,11 +92,14 @@
         this.$overlay.style.display = "none";
     }
 
-    View.prototype.edit = function(id){
-        this.id = id;
+    View.prototype.edit = function(data){
+        this.id = data.id;
         this.$modal_edit.style.display = "flex";
         this.$overlay.style.display = "flex";
-        this.$e_text.focus()
+        this.$e_text.focus();
+        this.$e_text.value = data.text;
+        this.$e_emergence.value = data.emergence;
+        this.$e_time_consuming.value = data.time_consuming;
     }
     
     View.prototype.task_edit = function(data){

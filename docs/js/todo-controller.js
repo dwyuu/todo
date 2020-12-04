@@ -73,7 +73,7 @@
     }
 
     Controller.prototype.edit = function(id){
-        this.view.edit(id);
+        this.view.edit(this.model.List.return_todo(id));
     }
 
     Controller.prototype.task_edit = function(data){
